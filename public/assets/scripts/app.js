@@ -1,0 +1,161 @@
+const dados_atualizados = {
+    "lugares": [
+        {
+            "id": 1,
+            "nome": "Paris",
+            "descricao": "Capital francesa famosa por arte, gastronomia e arquitetura icônica.",
+            "conteudo": "Paris oferece museus de classe mundial, boulevards arborizados e cafés charmosos. Ideal para quem busca história, cultura e experiências gastronômicas.",
+            "pais": "França",
+            "destaque": true,
+            "imagem_pincipal": "assets/img/torreEiffel1.jpg", 
+            "atracoes": [
+                {
+                    "id": 1,
+                    "nome": "Torre Eiffel",
+                    "descricao": "Monumento símbolo de Paris com mirantes panorâmicos.",
+                    "imagem": "assets/img/torreEiffel2.jpg"
+                },
+                {
+                    "id": 2,
+                    "nome": "Museu do Louvre",
+                    "descricao": "Maior museu de arte do mundo, lar da Mona Lisa.",
+                    "imagem": "assets/img/Museu do Louvre.jpg"
+                }
+            ]
+        },
+         {
+            "id": 2,
+            "nome": "Agra",
+            "descricao": "Cidade histórica na Índia, lar de um dos maiores símbolos do amor.",
+            "conteudo": "Agra é uma cidade do estado de Uttar Pradesh, famosa por ser o lar do Taj Mahal, um mausoléu de mármore branco construído pelo imperador Mughal Shah Jahan.",
+            "pais": "Índia",
+            "destaque": true,
+            "data": "2025-04-02",
+            "imagem_pincipal": "assets/img/tajMahal1.webp",
+            "atracoes": [
+                {
+                    "id": 1,
+                    "nome": "Taj Mahal",
+                    "descricao": "Mausoléu de mármore branco-marfim, uma das Novas Sete Maravilhas do Mundo.",
+                    "imagem": "assets/img/tajMahal2.jpg"
+                },
+                {
+                    "id": 2,
+                    "nome": "Forte de Agra",
+                    "descricao": "Fortaleza histórica e Patrimônio Mundial da UNESCO.",
+                    "imagem": "assets/img/Forte de Agra.jpg"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "nome": "Cairo",
+            "descricao": "Capital do Egito e porta de entrada para a civilização antiga.",
+            "conteudo": "O Cairo é uma metrópole agitada com milhares de anos de história, sendo o principal ponto de acesso para as famosas Pirâmides de Gizé.",
+            "pais": "Egito",
+            "destaque": true,
+            "data": "2025-04-03",
+            "imagem_pincipal": "assets/img/piramidesEgito1.webp",
+            "atracoes": [
+                {
+                    "id": 1,
+                    "nome": "Pirâmides de Gizé",
+                    "descricao": "Complexo de pirâmides e a Grande Esfinge, símbolos do Egito Antigo.",
+                    "imagem": "assets/img/piramidesEgito2.jpg"
+                },
+                {
+                    "id": 2,
+                    "nome": "Museu Egípcio",
+                    "descricao": "Abriga a maior coleção de antiguidades faraônicas do mundo.",
+                    "imagem": "assets/img/Museu Egípcio.jpg"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "nome": "Rio de Janeiro",
+            "descricao": "Cidade maravilhosa com praias, morros e ritmo contagiante.",
+            "conteudo": "Entre o mar e a mata, o Rio combina belezas naturais, patrimônio histórico e vida cultural vibrante. O Cristo Redentor é o seu cartão-postal.",
+            "pais": "Brasil",
+            "destaque": true,
+            "data": "2025-04-04",
+            "imagem_pincipal": "assets/img/CristoRedentor1.jpg",
+            "atracoes": [
+                {
+                    "id": 1,
+                    "nome": "Cristo Redentor",
+                    "descricao": "Estátua no topo do Corcovado com vista panorâmica da cidade.",
+                    "imagem": "assets/img/CristoRedentor2.jpg"
+                },
+                {
+                    "id": 2,
+                    "nome": "Pão de Açúcar",
+                    "descricao": "Complexo de morros com bondinho e mirantes sobre a baía.",
+                    "imagem": "assets/img/Pão de Açúcar.jpg"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "nome": "Pisa",
+            "descricao": "Cidade italiana na Toscana, famosa pela sua torre inclinada.",
+            "conteudo": "Pisa atrai milhões de turistas que visitam a Piazza dei Miracoli, um complexo de monumentos medievais que inclui o famoso campanário torto.",
+            "pais": "Itália",
+            "destaque": false,
+            "data": "2025-04-05",
+            "imagem_pincipal": "assets/img/torreDePisa1.jpg",
+            "atracoes": [
+                {
+                    "id": 1,
+                    "nome": "Torre de Pisa",
+                    "descricao": "Campanário famoso pela sua inclinação acidental.",
+                    "imagem": "assets/img/torreDePisa2.jpg"
+                },
+                {
+                    "id": 2,
+                    "nome": "Duomo di Pisa",
+                    "descricao": "Catedral medieval, obra-prima da arquitetura românica.",
+                    "imagem": "assets/img/Duomo di Pisa.jpg"
+                }
+            ]
+        }
+    ]
+};
+
+
+const secaoCards = document.querySelector('.cards');
+
+if (secaoCards) {
+    const colCards = secaoCards.querySelectorAll('.col');
+    const lugares = dados_atualizados.lugares;
+
+    colCards.forEach((col, index) => {
+        if (lugares[index]) {
+            const lugar = lugares[index];
+            const cardImg = col.querySelector('.card-img-top');
+            const cardTitle = col.querySelector('.card-body .card-title');
+            const cardText = col.querySelector('.card-body .card-text');
+
+            if (cardImg) {
+                cardImg.src = lugar.imagem_pincipal; 
+                cardImg.alt = `Imagem principal de ${lugar.nome}`;
+            }
+            if (cardTitle) {
+                cardTitle.textContent = `${lugar.nome} - ${lugar.pais}`;
+            }
+            if (cardText) {
+                cardText.textContent = lugar.descricao;
+                cardText.innerHTML += `<br><small class="text-muted">Última viagem: ${lugar.data}</small>`;
+            }
+            
+            col.addEventListener('click', () => {
+                window.location.href = `detalhe.html?id=${lugar.id}`;
+            });
+
+            col.style.cursor = 'pointer';
+
+        } else {
+            col.style.display = 'none';
+        }
+    });
+}
