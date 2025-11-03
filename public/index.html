@@ -56,60 +56,60 @@
             </div>
 
         </section>
-        <section class="cards">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
+
+
+
+<section class="cards">
+    <h2 class="text-center mb-4">Destinos Populares</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        </div>
+</section>
+
+
+            <section class="container mt-5" id="formulario-lugar">
+    <h2 class="mb-3">Adicionar Novo Destino</h2>
+    <form id="form-novo-lugar">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="form-nome" class="form-label">Nome do Lugar</label>
+                    <input type="text" class="form-control" id="form-nome" placeholder="Ex: Roma" required>
                 </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
+                <div class="mb-3">
+                    <label for="form-pais" class="form-label">País</label>
+                    <input type="text" class="form-control" id="form-pais" placeholder="Ex: Itália" required>
                 </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
+                <div class="mb-3">
+                    <label for="form-imagem" class="form-label">URL da Imagem Principal</label>
+                    <input type="url" class="form-control" id="form-imagem" placeholder="https://..." required>
                 </div>
             </div>
-        </section>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="form-descricao" class="form-label">Descrição (para o card)</label>
+                    <textarea class="form-control" id="form-descricao" rows="2" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="form-conteudo" class="form-label">Conteúdo (para a página de detalhes)</label>
+                    <textarea class="form-control" id="form-conteudo" rows="4" required></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-end">
+            <div class="col-md-6">
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="form-destaque">
+                    <label class="form-check-label" for="form-destaque">Marcar como Destaque</label>
+                </div>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <button type="submit" class="btn btn-primary w-100 w-md-auto">Adicionar Lugar</button>
+            </div>
+        </div>
+    </form>
+</section>
+
+
     </main>
     <footer>
         <section class="sobre">
@@ -137,6 +137,58 @@
         </section>
 
     </footer>
+
+    <div class="modal fade" id="modal-editar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalEditarLabel">Editar Destino</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="form-editar-lugar">
+                    <input type="hidden" id="edit-form-id">
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="edit-form-nome" class="form-label">Nome do Lugar</label>
+                                <input type="text" class="form-control" id="edit-form-nome" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="edit-form-pais" class="form-label">País</label>
+                                <input type="text" class="form-control" id="edit-form-pais" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="edit-form-imagem" class="form-label">URL da Imagem Principal</label>
+                                <input type="url" class="form-control" id="edit-form-imagem" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="edit-form-descricao" class="form-label">Descrição (para o card)</label>
+                                <textarea class="form-control" id="edit-form-descricao" rows="2" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="edit-form-conteudo" class="form-label">Conteúdo (para a página de detalhes)</label>
+                                <textarea class="form-control" id="edit-form-conteudo" rows="4" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="edit-form-destaque">
+                        <label class="form-check-label" for="edit-form-destaque">Marcar como Destaque</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary" form="form-editar-lugar">Salvar Alterações</button>
+            </div>
+        </div>
+    </div>
+</div>
+
     <script src="assets/scripts/app.js"></script>
 </body>
 
