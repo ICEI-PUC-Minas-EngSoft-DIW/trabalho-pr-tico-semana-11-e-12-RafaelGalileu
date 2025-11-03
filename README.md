@@ -6,24 +6,26 @@ Para esse projeto, além de mudarmos o JSON para o JSON Server, vamos permitir o
 
 ## Informações do trabalho
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Rafael Galileu Thales Oliveira
+- Matricula: 904480
+- Proposta de projeto escolhida: Viagem e Turismo
+- Breve descrição sobre seu projeto: O projeto é um portal de 'Viagem & Turismo' que destaca destinos populares, fornecendo aos usuários descrições detalhadas sobre cada local e uma lista de seus principais atrativos.
 
 **Print dos testes da API com Postman ou similar**
 
-<< COLOQUE A IMAGEM GET AQUI >>
+[!Teste de GET](/public/assets/img/GET.png)
 
-<< COLOQUE A IMAGEM POST AQUI >>
+[!Teste de POST](/public/assets/img/POST.png)
 
-<< COLOQUE A IMAGEM PUT AQUI >>
+[!Teste de PUT](/public/assets/img/PUT.png)
 
-<< COLOQUE A IMAGEM DELETE AQUI >>
+[!Teste de DELETE](/public/assets/img/DELETE.png)
 
 **Print da aba NETWORK com requisições Fetch/XHR POST e GET**
 
-<<  COLOQUE A IMAGEM AQUI >>
+[!Fetch/XHR POST](/public/assets/img/FetchPost.png)
+
+[!Fetch/XHR GET](/public/assets/img/FetchGET.png)
 
 ## **Orientações Gerais**
 
