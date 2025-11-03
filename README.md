@@ -13,19 +13,19 @@ Para esse projeto, além de mudarmos o JSON para o JSON Server, vamos permitir o
 
 **Print dos testes da API com Postman ou similar**
 
-[!Teste de GET](/public/assets/img/GET.png)
+![Teste de GET](/public/assets/img/GET.png)
 
-[!Teste de POST](/public/assets/img/POST.png)
+![Teste de POST](/public/assets/img/POST.png)
 
-[!Teste de PUT](/public/assets/img/PUT.png)
+![Teste de PUT](/public/assets/img/PUT.png)
 
-[!Teste de DELETE](/public/assets/img/DELETE.png)
+![Teste de DELETE](/public/assets/img/DELETE.png)
 
 **Print da aba NETWORK com requisições Fetch/XHR POST e GET**
 
-[!Fetch/XHR POST](/public/assets/img/FetchPost.png)
+![Fetch/XHR POST](/public/assets/img/FetchPost.png)
 
-[!Fetch/XHR GET](/public/assets/img/FetchGET.png)
+![Fetch/XHR GET](/public/assets/img/FetchGET.png)
 
 ## **Orientações Gerais**
 
